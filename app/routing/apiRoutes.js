@@ -2,30 +2,32 @@ var express = require("express");
 var path = require("path");
 var fs = require("fs");
 var app = express();
-var htmlRoutes = require("./html-routes.js");
-var apiRoutes = require("./api-routes.js");
+var htmlRoutes = require("./htmlRoutes.js");
+var apiRoutes = require("./apiRoutes.js");
 
 // load routes into app by passing app into route functions
 htmlRoutes(app);
 apiRoutes(app);
 var app = express();
-var PORT = 4000;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-module.exports = { 
-    home: function(app){
-            app.get("/", function(req, res) {
-                res.sendFile(path.join(__dirname, "/home.html"));
-            })
-            },
-    survey: function(app){
-                app.get("/survey", function(req, res) {
-                    res.sendFile(path.join(__dirname, "survey.html"));
-                })      
-            }    
-};
+module.exports = {
+    function (app){
+        app.get("/", function(req, res) {
+            res.json(path.join(__dirname, "public/index.html"));
+          
+        console.log(req.body);
+           res.sendFile(path.join(__dirname, "public/index.html"));
+    });  
+    app.get("/survey", function(req, res) {
+        res.json(path.join(__dirname, "public/survey.html"));
+        console.log(req.body)
+        res.sendFile(path.join(__dirname, "public/survey.html"));
+    })   
+}};
 app.post("/api/friends", function(req, res) {
 var newFriend =  {
     "name": $("#name").val().trim(),
@@ -51,19 +53,19 @@ var newFriend =  {
     for (var i = 0; i< scores.length; i++){
         Math.abs
     }
-          friends.push(newFriend);
+       friends.push(newFriend);
         
           res.json(newFriend);
-  
-   
-    
+        })   
+}  
+})    
   //display best match
-  app.get("/app/friends/:match", function(req, res){
-    var match = req.params.match;
-    console.log(match);
-//????????
-  }
-  });
+//   app.get("/app/friends/:match", function(req, res){
+//     var match = req.params.match;
+//     console.log(match);
+// //????????
+//   }
+//   });
   
     app.listen(PORT, function() {
         console.log("App listening on PORT " + PORT);

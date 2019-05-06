@@ -1,29 +1,31 @@
 var express = require("express");
 var path = require("path");
 var app = express();
-var htmlRoutes = require("./public/htmlroutes.js");
-var apiRoutes = require("./public/apiroutes.js")
+var htmlRoutes = require("./htmlRoutes.js");
+var apiRoutes = require("./apiToutes.js")
 
 // load routes into app by passing app into route functions
 htmlRoutes(app);
 apiRoutes(app);
 var app = express();
-var PORT = 4000;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-//basic route user sends first to AJAX page
+
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
-  });
+  res.json(path.join(__dirname, "public/index.html"));
+});
+
   
   app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "survey.html"));
+    res.json(path.join(__dirname, "public/survey.html"));
+    
   });
   
- //display all friends
   app.get("/app/data/friends", function(req, res) {
+    res.sendFile(path.join(__dirname, "public/survey.html"));
     return res.json(friends);
   });
 
