@@ -1,13 +1,13 @@
 var express = require("express");
 var path = require("path");
 var app = express();
-var htmlRoutes = require("./htmlRoutes.js");
-var apiRoutes = require("./apiToutes.js")
+var apiR = require("./app/routing/apiRoutes.js");
+var htmlR = require("./app/routing/htmlRoutes.js");
+var friends = require("./app/data/friends");
 
 // load routes into app by passing app into route functions
-htmlRoutes(app);
-apiRoutes(app);
-var app = express();
+// htmlR(app);
+// apiR(app);
 var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
@@ -15,17 +15,17 @@ app.use(express.json());
 
 
 app.get("/", function(req, res) {
-  res.json(path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "/app/public/index.html"));
 });
 
   
   app.get("/survey", function(req, res) {
-    res.json(path.join(__dirname, "public/survey.html"));
+    res.sendFile(path.join(__dirname, "/app/public/survey.html"));
     
   });
   
   app.get("/app/data/friends", function(req, res) {
-    res.sendFile(path.join(__dirname, "public/survey.html"));
+    res.sendFile(path.join(__dirname, "friends"));
     return res.json(friends);
   });
 

@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    color: rgb(32, 27, 27);
+    background-image: url("../images/gravel.png");
+    width: 100%;
+}
+.card {
+    max-width: 960px;
+    width: 100%;
+    background: cornsilk;
+    align-self: center;
+    text-align: center;
+}
+btn {
+    padding: 11%;
+}
+hr {
+    border-width: 4px;
+    border-color: black;
+}
