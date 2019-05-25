@@ -11,13 +11,14 @@ body {
     line-height: 34px;
     color: rgb(32, 27, 27);
     width: 100%;
+
 }
 .card {
     max-width: 960px;
     width: 100%;
     background: cornsilk;
     align-self: center;
-    text-align: center;
+    /* text-align: center; */
 }
 btn {
     padding: 11%;

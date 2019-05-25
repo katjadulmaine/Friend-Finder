@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-        <title>Survey</title>
+    <title>Survey</title>
 </head>
-
 <body>
     <div class="container">
         <div class="card d-flex justify-content-center portCard" style="width: 100%;">
@@ -19,150 +17,143 @@
                 <div class="row" class="d-flex justify-content-center">
                     <div class="col-12 text-center">
                         <h2 class="card-title">Friend Finder Survey</h2>
-                        <p class="card-text">Fill in your full name and add a picture of yourself.</p>
-                        <p class="card-text">Next answer the questions below 1 = strongly disagree and 5 is
-                            strongly agree.</p>
-                        <p class="card-text">Then find your match!</p>
+                        <p class="card-text">Fill in your name and add a picture of yourself.</p>
+                        <p class="card-text">Next answer the questions below.</p>
+                        <p class="card-text">Then Find Your Match!</p>
                         <hr>
                     </div>
                     <div class="row">
                         <div class="col-12 image-box">
-                        <h4>Fill in your information.</h4>
-                         <p id="name">Enter your full name</p>  
-                         <input class="form-control" type="text" id="name"> 
-                         <p id="photo">Enter a link with your photo</p>
-                         <input class="form-control" type="link" id="photo">
-                        </div>   
+                            <h4>Fill In Your Information.</h4>
+                            <p id="name">Enter Your  Name</p>
+                            <input class="form-control" type="text" id="name">
+                            <p id="photo">Enter A Link With Your Photo</p>
+                            <input class="form-control" type="link" id="photo">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 image-box">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Question One: Do you like to read?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q1" role="group" aria-label="First group">
-                                    <button type="button" class="btn btn-info" value="1">1</button>
-                                    <button type="button" class="btn btn-info" value="2">2</button>
-                                    <button type="button" class="btn btn-info" value="3">3</button> 
-                                    <button type="button" class="btn btn-info" value="4">4</button>
-                                    <button type="button" class="btn btn-info" value="5">5</button>                     
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Two: Do you like fantasy/sci-fi?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q2" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">1</button>
-                                        <button type="button" class="btn btn-info" value="2">2</button>
-                                        <button type="button" class="btn btn-info" value="3">3</button> 
-                                        <button type="button" class="btn btn-info" value="4">4</button>
-                                        <button type="button" class="btn btn-info" value="5">5</button>     
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Three: Do you write lists to keep organized?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q3" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">1</button>
-                                        <button type="button" class="btn btn-info" value="2">2</button>
-                                        <button type="button" class="btn btn-info" value="3">3</button> 
-                                        <button type="button" class="btn btn-info" value="4">4</button>
-                                        <button type="button" class="btn btn-info" value="5">5</button>     
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Four: Do you like to travel?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q4" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">1</button>
-                                        <button type="button" class="btn btn-info" value="2">2</button>
-                                        <button type="button" class="btn btn-info" value="3">3</button> 
-                                        <button type="button" class="btn btn-info" value="4">4</button>
-                                        <button type="button" class="btn btn-info" value="5">5</button>     
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Five: Would you rather be hiking in the
-                                mountains(1) or lying in a hammock(5)?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q5" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">1</button>
-                                        <button type="button" class="btn btn-info" value="2">2</button>
-                                        <button type="button" class="btn btn-info" value="3">3</button> 
-                                        <button type="button" class="btn btn-info" value="4">4</button>
-                                        <button type="button" class="btn btn-info" value="5">5</button>   
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Six: Do you enjoy doing puzzles?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q6" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">1</button>
-                                        <button type="button" class="btn btn-info" value="2">2</button>
-                                        <button type="button" class="btn btn-info" value="3">3</button> 
-                                        <button type="button" class="btn btn-info" value="4">4</button>
-                                        <button type="button" class="btn btn-info" value="5">5</button>   
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Seven: Do you have a daki?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q7" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">What is a daki?</button>
-                                        <button type="button" class="btn btn-info" value="2">No daki!</button>
-                                        <button type="button" class="btn btn-info" value="3">Have a daki.</button> 
-                                        <button type="button" class="btn btn-info" value="4">Have 2 dakis</button>
-                                        <button type="button" class="btn btn-info" value="5">Have more than 2 dakis</button>   
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Eight: Do you like dancing in the rain?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q8" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">1</button>
-                                        <button type="button" class="btn btn-info" value="2">2</button>
-                                        <button type="button" class="btn btn-info" value="3">3</button> 
-                                        <button type="button" class="btn btn-info" value="4">4</button>
-                                        <button type="button" class="btn btn-info" value="5">5</button>   
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Nine: Do you like history?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q9" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">1</button>
-                                        <button type="button" class="btn btn-info" value="2">2</button>
-                                        <button type="button" class="btn btn-info" value="3">3</button> 
-                                        <button type="button" class="btn btn-info" value="4">4</button>
-                                        <button type="button" class="btn btn-info" value="5">5</button>   
-                                </div>
-                            </div>
-                            <li class="list-group-item">Question Ten: What would be your first choice of snacks?</li>
-                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group mr-2" id="q10" role="group" aria-label="First group">
-                                        <button type="button" class="btn btn-info" value="1">Whole Foods Bakery Items</button>
-                                        <button type="button" class="btn btn-info" value="2">Something healthy</button>
-                                        <button type="button" class="btn btn-info" value="3">Something sweet</button> 
-                                        <button type="button" class="btn btn-info" value="4">Something salty</button>
-                                        <button type="button" class="btn btn-info" value="5">You don't like to snack</button>   
-                                </div>
-                                <br>
-                                <div>
-                                        <button type="button" class="btn btn-success" id="submit">Sumbit</button>
-                                </div>
+                            <p class="list-group-item">Question One: Do you like to read?</p>
+                            <select class="option" id="q1">
+                                <option value=""></option>
+                                <option value="1">1 - Strongly Disagree</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Strongly Agree</option>
+                            </select>
+                            <p class="list-group-item">Question Two: Do you like fantasy/sci-fi?</p>
+                            <select class="option" id="q2">
+                                <option value=""></option>
+                                <option value="1">1 - Strongly Disagree</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Strongly Agree</option>
+                            </select>
+                            <p class="list-group-item">Question Three: Do you write lists to keep organized?</p>
+                            <select class="option" id="q3">
+                                <option value=""></option>
+                                <option value="1">1 - Strongly Disagree</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Strongly Agree</option>
+                            </select>
+                            <p class="list-group-item">Question Four: Do you like to travel?</p>
+                            <select class="option" id="q4">
+                                <option value=""></option>
+                                <option value="1">1 - Strongly Disagree</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Strongly Agree</option>
+                            </select>
+                            <p class="list-group-item">Question Five: Would you rather be hiking in the
+                                mountains(1) or lying in a hammock(5)?</p>
+                            <select class="option" id="q5">
+                                <option value=""></option>
+                                <option value="1">1 - Hiking</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Hammock</option>
+                            </select>
+                            <p class="list-group-item">Question Six: Do you enjoy doing puzzles?</p>
+                            <select class="option" id="q6">
+                                <option value=""></option>
+                                <option value="1">1 - Strongly Disagree</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Strongly Agree</option>
+                            </select>
+                            <p class="list-group-item">Question Seven: Do you have a daki?</p>
+                            <select class="option" id="q7">
+                                <option value=""></option>
+                                <option value="1">1 - What Is A Daki?</option>
+                                <option value="2">2 - Have No Daki!</option>
+                                <option value="3">3 - Have a Daki!</option>
+                                <option value="4">4 - Have Two Dakis!</option>
+                                <option value="5">5 - Have More Than 2 Dakis!!!</option>
+                            </select>
+                            <p class="list-group-item">Question Eight: Do you like dancing in the rain?</p>
+                            <select class="option" id="q8">
+                                <option value=""></option>
+                                <option value="1">1 - Strongly Disagree</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Strongly Agree</option>
+                            </select>
+                            <p class="list-group-item">Question Nine: Do you like history?</p>
+                            <select class="option" id="q9">
+                                <option value=""></option>
+                                <option value="1">1 - Strongly Disagree</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Strongly Agree</option>
+                            </select>
+                            <p class="list-group-item">Question Ten: What would be your first choice of snacks?</p>
+                            <select class="option" id="q10">
+                                <option value=""></option>
+                                <option value="1">1 - You Don't Like To Snack</option>
+                                <option value="2">2 - Whole Foods Bakery Items</option>
+                                <option value="3">3 - Something Healthy</option>
+                                <option value="4">4 - Something Sweet</option>
+                                <option value="5">5 - Something Salty</option>
+                            </select>
+                            <br>
+                            <div>
+                                <button type="button" class="btn btn-success" id="submit">Find Your Friend</button>
                             </div>
                         </ul>
-                    </div>    
-                </div> 
-            </div> 
-            <div class="row" class="d-flex justify-content-center">
-                <div class="col-12 text-center">         
-                    <div class="card-body">
-                        <a href="https://github.com/katjadulmaine/Friend-Finder" type="button"
-                                class="btn btn-info card-link">GitHub Repo</a>
-                        <a href="/data/friends" type="button" class="btn btn-info card-link">API Friends List</a>
                     </div>
                 </div>
             </div>
         </div>
-    </diva>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <br>
+        <div class="row" class="d-flex justify-content-center">
+            <div class="col-12 text-center">
+                <div class="card-body">
+                    <a href="https://github.com/katjadulmaine/Friend-Finder" type="button" class="btn btn-info card-link">GitHub Repo</a>
+                    <br>
+                    <a href="/data/friends" type="button" class="btn btn-info card-link">API Friends List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>
