@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -27,23 +28,24 @@
                             <h4>Fill In Your Information.</h4>
                             <p id="name">Enter Your  Name</p>
                             <input class="form-control" type="text" id="name">
+                            <br>
                             <p id="photo">Enter A Link With Your Photo</p>
                             <input class="form-control" type="link" id="photo">
                         </div>
                     </div>
-                </div>
+                </div> <br> 
                 <div class="row">
                     <div class="col-12 image-box">
                         <ul class="list-group list-group-flush">
                             <p class="list-group-item">Question One: Do you like to read?</p>
                             <select class="option" id="q1">
-                                <option value=""></option>
+                                <option value="">Answer Choices</option>
                                 <option value="1">1 - Strongly Disagree</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Strongly Agree</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Two: Do you like fantasy/sci-fi?</p>
                             <select class="option" id="q2">
                                 <option value=""></option>
@@ -52,7 +54,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Strongly Agree</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Three: Do you write lists to keep organized?</p>
                             <select class="option" id="q3">
                                 <option value=""></option>
@@ -61,7 +63,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Strongly Agree</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Four: Do you like to travel?</p>
                             <select class="option" id="q4">
                                 <option value=""></option>
@@ -70,7 +72,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Strongly Agree</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Five: Would you rather be hiking in the
                                 mountains(1) or lying in a hammock(5)?</p>
                             <select class="option" id="q5">
@@ -80,7 +82,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Hammock</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Six: Do you enjoy doing puzzles?</p>
                             <select class="option" id="q6">
                                 <option value=""></option>
@@ -89,7 +91,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Strongly Agree</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Seven: Do you have a daki?</p>
                             <select class="option" id="q7">
                                 <option value=""></option>
@@ -98,7 +100,7 @@
                                 <option value="3">3 - Have a Daki!</option>
                                 <option value="4">4 - Have Two Dakis!</option>
                                 <option value="5">5 - Have More Than 2 Dakis!!!</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Eight: Do you like dancing in the rain?</p>
                             <select class="option" id="q8">
                                 <option value=""></option>
@@ -107,7 +109,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Strongly Agree</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Nine: Do you like history?</p>
                             <select class="option" id="q9">
                                 <option value=""></option>
@@ -116,7 +118,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5 - Strongly Agree</option>
-                            </select>
+                            </select> <br>
                             <p class="list-group-item">Question Ten: What would be your first choice of snacks?</p>
                             <select class="option" id="q10">
                                 <option value=""></option>
@@ -125,10 +127,10 @@
                                 <option value="3">3 - Something Healthy</option>
                                 <option value="4">4 - Something Sweet</option>
                                 <option value="5">5 - Something Salty</option>
-                            </select>
+                            </select> <br>
                             <br>
                             <div>
-                                <button type="button" class="btn btn-success" id="submit">Find Your Friend</button>
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" id="submit">Find Your Friend</button>
                             </div>
                         </ul>
                     </div>
@@ -139,12 +141,29 @@
         <div class="row" class="d-flex justify-content-center">
             <div class="col-12 text-center">
                 <div class="card-body">
-                    <a href="https://github.com/katjadulmaine/Friend-Finder" type="button" class="btn btn-info card-link">GitHub Repo</a>
-                    <br>
-                    <a href="/data/friends" type="button" class="btn btn-info card-link">API Friends List</a>
+                    <a href="https://github.com/katjadulmaine/Friend-Finder" type="button" class="btn btn-darkcard-link">GitHub Repo</a>     <a href="/data/friends" type="button" class="btn btn-dark card-link">API Friends List</a>
                 </div>
             </div>
         </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="friendModalresults" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="resultModal">Results</h5>
+             
+            </div>
+            <div class="modal-body">
+                <h4>Meet your new best friend!</h4>
+                <h5 id="friendName"></h5>
+                <img id="friendPhoto" scr="" alt="" width=260px height=260px>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>Close</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -155,5 +174,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script>
+        $("#submit").on("click", () => {
+            check form is it valid
+            clear form "" on AbortController$(".modal").modal();
+            post to api routes addFriend data
+            var addFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                score: [
+                    $("q1").val(),
+                    $("q2").val(),
+                    $("q3").val(),
+                    $("q4").val(),
+                    $("q5").val(),
+                    $("q6").val(),
+                    $("q7").val(),
+                    $("q8").val(),
+                    $("q9").val(),
+                    $("q10").val(),
+                ]
+            }
+        });
+       
+        </script>
 </body>
+
 </html>
