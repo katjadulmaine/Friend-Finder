@@ -4,8 +4,6 @@ var fs = require("fs");
 var app = express();
 var friends = require("../data/friends");
 
-
-
 module.exports = function (app) {
     app.get("/api/friends", function (req, res) {
         console.log(friends)
@@ -22,12 +20,12 @@ module.exports = function (app) {
                 var friendsScore = res.json(data);
             }
         })
-        var newFriendScore = req.body.scores
+        var addFriend = req.body.scores
      
         });
         var space = 0;
         var spaceArr = [];
-        scoreNew = newFriend.scores.val
+        scoreNew = addFriend.scores.val
         for (var i = 0; i < friends.length; i++) {
 
             for (var n = 0; n < scoreNew.length; n++) {

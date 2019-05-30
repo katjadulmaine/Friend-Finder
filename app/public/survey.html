@@ -26,10 +26,10 @@
                     <div class="row">
                         <div class="col-12 image-box">
                             <h4>Fill In Your Information.</h4>
-                            <p id="name">Enter Your  Name</p>
+                            <p>Enter Your  Name</p>
                             <input class="form-control" type="text" id="name">
                             <br>
-                            <p id="photo">Enter A Link With Your Photo</p>
+                            <p>Enter A Link With Your Photo</p>
                             <input class="form-control" type="link" id="photo">
                         </div>
                     </div>
@@ -176,25 +176,35 @@
         crossorigin="anonymous"></script>
         <script>
         $("#submit").on("click", () => {
-            check form is it valid
-            clear form "" on AbortController$(".modal").modal();
-            post to api routes addFriend data
+           $(".modal").modal()
+           if $("#name.value"(" ")|| "#photo.value"("") || "#q1.value" (" ") || "#q2.value" (" ") || "#q3.value" (" ") || "#q4.value" (" ") || "#q5.value" (" ") || "#q6.value" (" ") || "#q7.value" (" ") || "#q8.value" (" ") || "#q9.value" (" ") || "#q10.value" (" ")) {
+               alert("Please make sure you have added name, photo link and answered all the questions.")
+           }              
+            else{
             var addFriend = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
+                name: $("#name").value().trim(),
+                photo: $("#photo").value().trim(),
                 score: [
-                    $("q1").val(),
-                    $("q2").val(),
-                    $("q3").val(),
-                    $("q4").val(),
-                    $("q5").val(),
-                    $("q6").val(),
-                    $("q7").val(),
-                    $("q8").val(),
-                    $("q9").val(),
-                    $("q10").val(),
+                    $("#q1").value(),
+                    $("#q2").value(),
+                    $("#q3").value(),
+                    $("#q4").value(),
+                    $("#q5").value(),
+                    $("#q6").value(),
+                    $("#q7").value(),
+                    $("#q8").value(),
+                    $("#q9").value(),
+                    $("#q10").value(),
                 ]
             }
+            $.ajax({
+            type: "POST",
+            url: "api/friends",
+            data:  addFriend
+            .then( function (){
+               //get modal up and display eveerything
+            })
+            })}
         });
        
         </script>
