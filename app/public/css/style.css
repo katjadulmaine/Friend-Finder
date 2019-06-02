@@ -18,8 +18,9 @@ body {
     align-self: center;
     width: 100%;
 }
-img {
-    width: 100vw;
+
+.smallerImage{
+    width: 260px;
 }
 .card {
     width: 100%;

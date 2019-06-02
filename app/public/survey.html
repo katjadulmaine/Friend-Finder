@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>Survey</title>
 </head>
+
 <body>
     <div class="container">
         <div class="card d-flex justify-content-center portCard" style="width: 100%;">
@@ -26,14 +29,14 @@
                     <div class="row">
                         <div class="col-12 image-box">
                             <h4>Fill In Your Information.</h4>
-                            <p>Enter Your  Name</p>
+                            <p>Enter Your Name</p>
                             <input class="form-control" type="text" id="name">
                             <br>
                             <p>Enter A Link With Your Photo</p>
                             <input class="form-control" type="link" id="photo">
                         </div>
                     </div>
-                </div> <br> 
+                </div> <br>
                 <div class="row">
                     <div class="col-12 image-box">
                         <ul class="list-group list-group-flush">
@@ -130,7 +133,8 @@
                             </select> <br>
                             <br>
                             <div>
-                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" id="submit">Find Your Friend</button>
+                                <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#exampleModalLong" id="submit">Find Your Friend</button>
                             </div>
                         </ul>
                     </div>
@@ -141,73 +145,87 @@
         <div class="row" class="d-flex justify-content-center">
             <div class="col-12 text-center">
                 <div class="card-body">
-                    <a href="https://github.com/katjadulmaine/Friend-Finder" type="button" class="btn btn-darkcard-link">GitHub Repo</a>     <a href="/data/friends" type="button" class="btn btn-dark card-link">API Friends List</a>
+                    <a href="https://github.com/katjadulmaine/Friend-Finder" type="button" class="btn btn-darkcard-link">GitHub Repo</a>
+                    <a href="/api/friends" type="button" class="btn btn-dark card-link">API Friends List</a>
+                    <!-- <button id= "apiFriends"class="btn btn-dark card-link">API Friends List</button> -->
                 </div>
             </div>
         </div>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="friendModalresults" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="resultModal">Results</h5>
-             
+
+        <!-- Modal -->
+        <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="friendModalresults"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resultModal">Results</h5>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Meet your new best friend!</h4>
+                        <h5 id="friendName"></h5>
+                        <div class="photo">
+                        </div>
+
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <h4>Meet your new best friend!</h4>
-                <h5 id="friendName"></h5>
-                <img id="friendPhoto" scr="" alt="" width=260px height=260px>
-            </div>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>Close</button>
-          </div>
         </div>
-      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script>
+    <script>
+        // $(".btn").on("click", ()=> {
+        //     $.ajax({
+        //             type: "GET",
+        //             url: "api/friends",
+        //     }).then =()=> {
+            
+        //     }
+        // })
         $("#submit").on("click", () => {
-           $(".modal").modal()
-           if $("#name.value"(" ")|| "#photo.value"("") || "#q1.value" (" ") || "#q2.value" (" ") || "#q3.value" (" ") || "#q4.value" (" ") || "#q5.value" (" ") || "#q6.value" (" ") || "#q7.value" (" ") || "#q8.value" (" ") || "#q9.value" (" ") || "#q10.value" (" ")) {
-               alert("Please make sure you have added name, photo link and answered all the questions.")
-           }              
-            else{
-            var addFriend = {
-                name: $("#name").value().trim(),
-                photo: $("#photo").value().trim(),
-                score: [
-                    $("#q1").value(),
-                    $("#q2").value(),
-                    $("#q3").value(),
-                    $("#q4").value(),
-                    $("#q5").value(),
-                    $("#q6").value(),
-                    $("#q7").value(),
-                    $("#q8").value(),
-                    $("#q9").value(),
-                    $("#q10").value(),
-                ]
+            // $(".modal").modal()
+            if ($("#name").val === " " || $("#photo").val === " " || $("#q1").val === " " || $("#q2").val === " " || $("#q3").val === " " || $("#q4").val === " " || $("#q5").val === " " || $("#q6").val === " " || $("#q7").val === " " || $("#q8").val === " " || $("#q9").val === " " || $("#q10").val === " ") {
+                alert("Please make sure you have added name, photo link and answered all the questions.")
             }
-            $.ajax({
-            type: "POST",
-            url: "api/friends",
-            data:  addFriend
-            .then( function (){
-               //get modal up and display eveerything
-            })
-            })}
+            else {
+                var addFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val(),
+                    ]
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "api/friends",
+                    data: addFriend
+                }).then(function (ret) {
+                    console.log("this was trippeds", ret)
+                    $("#friendName").text(ret.name)
+                    $(".photo").html(`<img class="smallerImage" src=.${ret.photo} alt="" >`)
+                    $(".modal").modal()
+                })
+            }
         });
-       
-        </script>
+
+    </script>
 </body>
 
 </html>
